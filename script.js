@@ -1,41 +1,30 @@
 //complete this code
-class Person:
-    def __init__(self, name, age):
-        self._name = name
-        self._age = age
+//complete this code
+class Person{
+	constructor(name,age){
+		this.name=" ";
+		this.age=age;
+	}
+	get name(){
+		return this.name;
+	}
+	set age(age){
+		this.age=age;
+	}
+}
 
-    @property
-    def name(self):
-        return self._name
+class Student extends Person{
+	study(){
+		console.log(`${this.name} is studying`)
+	}
+}
+class Teacher extends Person{
+	teach(){
+		console.log(`${this.name} is teaching`)
+	}
+}
 
-    @property
-    def age(self):
-        return self._age
-
-    @age.setter
-    def age(self, value):
-        self._age = value
-
-
-class Student(Person):
-    def study(self):
-        print(f"{self.name} is studying.")
-
-
-class Teacher(Person):
-    def teach(self):
-        print(f"{self.name} is teaching.")
-
-let person = new Person("John", 25);
-console.log(person.name);  // Output: John
-console.log(person.age);  // Output: 25
-
-person.age = 30;
-console.log(person.age);  // Output: 30
-
-let student = new Student("Alice", 20);
-student.study();  // Output: Alice is studying.
-
-let teacher = new Teacher("Mr. Smith", 35);
-teacher.teach();  // Output: Mr. Smith is teaching.
-
+// Do not change the code below this line
+window.Person = Person;
+window.Student = Student;
+window.Teacher = Teacher;
